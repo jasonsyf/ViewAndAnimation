@@ -43,10 +43,7 @@ public class ViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view);
         TitleBarView titleBarView = (TitleBarView) findViewById(R.id.title_bar);
         titleBarView.setAlpha(0.5f);
-        titleBarView.getTitleLiftBtn().setText("返回");
-        titleBarView.getTitleText().setText("我是自定义View的标题");
         titleBarView.getTitleText().setTextSize(20);
-        titleBarView.getTitleRightBtn().setText("分享");
         titleBarView.getTitleLiftBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

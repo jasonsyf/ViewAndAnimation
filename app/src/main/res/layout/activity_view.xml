@@ -9,8 +9,9 @@
     android:orientation="vertical"
     tools:context="com.jason.viewandanimation.ViewActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/content"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -19,6 +20,33 @@
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            app:left_btn_text="返回"
+            app:right_btn_text="分享"
+            app:title_text="我是标题2"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            />
+        <com.jason.viewandanimation.view.TitleBarView
+            android:id="@+id/title_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:left_btn_drawable="@mipmap/ic_launcher"
+            app:right_btn_text="分享"
+            app:title_text="我是标题2"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            />
+        <com.jason.viewandanimation.view.TitleBarView
+            android:id="@+id/title_bar2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:left_btn_text="返回"
+            app:right_btn_drawable="@mipmap/ic_launcher"
+            app:title_text="我是标题2"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -32,7 +60,7 @@
             android:layout_below="@id/title_bar"
             />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
