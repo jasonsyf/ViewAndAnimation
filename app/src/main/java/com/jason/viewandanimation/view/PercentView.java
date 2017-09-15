@@ -19,28 +19,31 @@ public class PercentView extends View {
     private final static String TAG = PercentView.class.getSimpleName();
     private Paint mPaint;
     private RectF mRectF;
-// 当不需要使用xml声明或者不需要使用inflate动态加载时候，实现此构造函数即可
+
+    // 当不需要使用xml声明或者不需要使用inflate动态加载时候，实现此构造函数即可
     public PercentView(Context context) {
         super(context, null);
     }
-//当需要在xml中声明此控件，则需要实现此构造函数。
-// 并且在构造函数中把自定义的属性与控件的数据成员连接起来。
+
+    //当需要在xml中声明此控件，则需要实现此构造函数。
+    // 并且在构造函数中把自定义的属性与控件的数据成员连接起来。
     public PercentView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
-// 接收一个style资源
+
+    // 接收一个style资源
     public PercentView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
 
-
     private void init() {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        mRectF=new RectF();
+        mRectF = new RectF();
     }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -82,8 +85,8 @@ public class PercentView extends View {
         float radius = width / 4;
         canvas.drawCircle(width / 2, width / 2, radius, mPaint);
         mPaint.setColor(Color.BLACK);
-        mRectF.set(width/2-radius,width/2-radius,width/2+radius,width/2+radius);
-        canvas.drawArc(mRectF,120,180,true,mPaint);
+        mRectF.set(width / 2 - radius, width / 2 - radius, width / 2 + radius, width / 2 + radius);
+        canvas.drawArc(mRectF, 120, 180, true, mPaint);
     }
 
 }
